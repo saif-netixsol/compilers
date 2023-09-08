@@ -1,5 +1,5 @@
 # Create from ubuntu image
-FROM ubuntu:22.04
+FROM ubuntu:latest
 
 # Label
 LABEL maintainer="saif@jitcompiler.com"
