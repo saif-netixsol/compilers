@@ -17,6 +17,7 @@ RUN apt-get upgrade -y
 # Install required packages
 RUN apt-get install software-properties-common -y
 RUN apt-get install zip unzip curl wget tar -y
+
 # Install sdkman
 RUN curl -s "https://get.sdkman.io" | bash
 RUN chmod a+x "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -24,9 +25,6 @@ RUN chmod a+x "$HOME/.sdkman/bin/sdkman-init.sh"
 # Install nodejs
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install nodejs -y
-# Install python
-RUN apt-get install python python3-pip -y
-RUN pip install numpy
 
 # Update packages
 RUN apt-get update -y
