@@ -22,24 +22,11 @@ RUN curl -s "https://get.sdkman.io" | bash
 RUN chmod a+x "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Install nodejs
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install nodejs -y
-# Install bhailang
-RUN npm install -g npm@latest
-RUN npm i -g bhailang
 # Install python
 RUN apt-get install python python3-pip -y
 RUN pip install numpy
-# Install C
-RUN apt-get install gcc -y
-# Install C++
-RUN apt-get install g++ -y
-# Install objective-c
-RUN apt-get install gobjc gnustep gnustep-devel -y
-# Install perl
-RUN apt-get install perl -y
-# Install ruby
-RUN apt-get install ruby-full -y
 
 # Update packages
 RUN apt-get update -y
