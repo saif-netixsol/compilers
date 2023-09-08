@@ -2,7 +2,7 @@
 FROM ubuntu:22.04
 
 # Label
-LABEL maintainer="compiler@jitcompiler.com"
+LABEL maintainer="saif@jitcompiler.com"
 
 # Create user
 RUN useradd -ms /bin/bash compiler
